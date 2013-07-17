@@ -1,5 +1,3 @@
-export PATH=$PATH:/Applications/android-sdk-macosx/platform-tools
-export PATH=$PATH:/usr/local/cassandra/bin
 export MANPATH=/opt/local/man:$MANPATH
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
