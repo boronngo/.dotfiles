@@ -3,6 +3,9 @@ export MANPATH=/opt/local/man:$MANPATH
 autoload colors
 colors
 
+/usr/bin/keychain ~/.ssh/id_rsa
+source ~/.keychain/$HOST-sh
+
 
 #プロンプト
 local p_cdir="%B%(!,%F{red},%F{green})[%~]%f%b"
