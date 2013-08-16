@@ -19,6 +19,9 @@ fi
 autoload -U compinit
 compinit
 
+#zsh: no matches found:の対策
+setopt nonomatch
+
 #MacとLinuxでlsのオプションを変える
 case ${OSTYPE} in
 	darwin*)
