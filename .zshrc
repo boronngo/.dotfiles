@@ -3,6 +3,7 @@ export MANPATH=/opt/local/man:$MANPATH
 autoload colors
 colors
 
+
 #プロンプト
 local p_cdir="%B%(!,%F{red},%F{green})[%~]%f%b"
 local p_info="%n@%m"
