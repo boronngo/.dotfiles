@@ -1,5 +1,3 @@
-export MANPATH=/opt/local/man:$MANPATH
-
 autoload colors
 colors
 
