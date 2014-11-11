@@ -1,1 +1,0 @@
-/home/boro/.dotfiles/.vim
