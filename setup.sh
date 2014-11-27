@@ -9,3 +9,5 @@ ln -s ~/.dotfiles/.vim ~/.vim
 ln -s ~/.dotfiles/.latexmkrc ~/.latexmkrc
 
 ln -s ~/.dotfiles/.ssh/config ~/.ssh/config
+
+ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
