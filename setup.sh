@@ -2,7 +2,6 @@
 
 echo "シンボリックリンクを貼ります"
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.zlogin ~/.zlogin
 
 ln -s ~/.dotfiles/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.vim ~/.vim

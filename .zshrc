@@ -1,6 +1,9 @@
 autoload colors
 colors
 
+precmd() {
+	echo -ne "\033]0;${USER}@${HOST}\007"
+}
 
 #プロンプト
 local p_cdir="%B%(!,%F{red},%F{green})[%~]%f%b"
