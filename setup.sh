@@ -1,14 +1,22 @@
 #!/bin/sh
 
 echo "シンボリックリンクを貼ります"
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.zlogin ~/.zlogin
+ln -s -f ~/.dotfiles/.zshrc ~/.zshrc
+ln -s -f ~/.dotfiles/.zlogin ~/.zlogin
 
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/.vim ~/.vim
+ln -s -f ~/.dotfiles/.vimrc ~/.vimrc
+case ${OSTYPE} in
+	darwin*)
+		ln -s -f -h ~/.dotfiles/.vim/ ~/.vim
+		;;
+	linux*)
+		ln -s -f ~/.dotfiles/.vim/ ~/.vim
+		;;
+esac
 
-ln -s ~/.dotfiles/.latexmkrc ~/.latexmkrc
+ln -s -f ~/.dotfiles/.latexmkrc ~/.latexmkrc
 
-ln -s ~/.dotfiles/.ssh/config ~/.ssh/config
+ln -s -f ~/.dotfiles/.ssh/config ~/.ssh/config
 
-ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+ln -s -f ~/.dotfiles/.tmux.conf ~/.tmux.conf
+
