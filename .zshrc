@@ -1,14 +1,26 @@
 autoload colors
 colors
+autoload -Uz vcs_info
+
+setopt prompt_subst
+#zstyle ':vcs_info:*' formats "%b"
+#zstyle ':vcs_info:*' actionformats '%s][* %F{green}%b%f(%F{red}%a%f)'
 
 precmd() {
 	echo -ne "\033]0;${USER}@${HOST}\007"
+	vcs_info
 }
 
+#git
+zstyle ':vcs_info:*' formats '%F{green}%b%f'    
+
+
 #プロンプト
-local p_cdir="%B%(!,%F{red},%F{green})[%~]%f%b"
+local p_cdir="%(!,%F{red},%F{green})%~%f"
 local p_info="%n@%m"
-PROMPT="$p_cdir"$'\n'"$p_info%# " 
+PROMPT="$p_info%# " 
+RPROMPT='${vcs_info_msg_0_:+($vcs_info_msg_0_)}[$p_cdir]' 
+
 
 #keychainがインストールされている場合は使う
 if [ -f "/usr/bin/keychain" ]
