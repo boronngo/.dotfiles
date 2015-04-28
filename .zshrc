@@ -11,6 +11,9 @@ precmd() {
 	vcs_info
 }
 
+#文字コードをUTF-8に変更
+export LANG=ja_JP.UTF-8
+
 #git
 zstyle ':vcs_info:*' formats '%F{green}%b%f'    
 
